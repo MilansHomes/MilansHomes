@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Milan's Homes LTD — Construction & Renovation in BC</title>
-  <meta name="description" content="Milan's Homes LTD is a full-service construction company serving all of British Columbia. Design, build, renovations, exteriors, and commercial projects. Free quotes." />
+  <meta name="description" content="Milan's Homes LTD is a full-service construction company serving all of British Columbia. Design, build, renovations, and commercial projects. Free quotes." />
   <link rel="icon" href="logo.png" />
   <meta property="og:title" content="Milan's Homes LTD — Construction & Renovation" />
   <meta property="og:description" content="Build. Renovate. Elevate. Quality craftsmanship across BC." />
@@ -70,8 +70,8 @@
     .contact-logo{flex:0 0 260px; display:flex; align-items:center; justify-content:flex-start; margin-left:40px}
     .contact-logo img{width:200px; height:auto}
     form.contact-form{display:grid; gap:12px; max-width:640px; flex:1; font-family: inherit;}
-    form.contact-form input, form.contact-form textarea{padding:14px 14px; border-radius:12px; border:1px solid #ccc; background:#fff; color:#0b0f19; font-family: inherit;}
-    form.contact-form input::placeholder, form.contact-form textarea::placeholder{color:#555}
+    form.contact-form input, form.contact-form textarea{padding:14px 14px; border-radius:12px; border:1px solid #ccc; background:#fff; color:#0b0f19; font-family: inherit; font-size:16px; line-height:1.2}
+    form.contact-form input::placeholder, form.contact-form textarea::placeholder{color:#555; font-family: inherit; font-size:16px}
     form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer; font-family: inherit; font-size:16px}
     form.contact-form button:hover{background:var(--brand-600)}
     .social-links{display:flex; gap:24px; margin-top:24px; justify-content:center}
@@ -79,7 +79,6 @@
     .social-links a:hover{background:var(--brand)}
     .social-links svg{width:34px; height:34px}
 
-    /* Footer */
     footer{padding:28px 0; background:#0e141c; border-top:1px solid rgba(255,255,255,.06); color:#9aa6b2; text-align:center}
 
     @media (max-width:960px){
@@ -88,6 +87,7 @@
     }
     @media (max-width:680px){
       .services,.projects{grid-template-columns:1fr}
+      .contact-logo{flex-basis:100%; justify-content:center; margin-left:0}
     }
   </style>
 </head>
@@ -106,6 +106,8 @@
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <!-- NOTE: Removed only the red header CTA. -->
       </nav>
     </div>
   </header>
@@ -124,8 +126,85 @@
     </div>
   </main>
 
-  <!-- rest of the code stays the same -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-lead">We take on complete house contracts and manage subcontractors, covering every stage of the build process.</p>
+      <div class="grid services">
+        <div class="card"><div class="icon">🏗️</div><h3>Design & Planning</h3><p>Architectural drawings, permits, budgeting, and detailed project scheduling.</p></div>
+        <div class="card"><div class="icon">🏠</div><h3>New Home Construction</h3><p>Full builds from foundation to finish, tailored to your vision and lot.</p></div>
+        <div class="card"><div class="icon">🧰</div><h3>Renovations & Remodels</h3><p>Kitchens, baths, additions, and whole-home upgrades with durable finishes.</p></div>
+        <div class="card"><div class="icon">🛋️</div><h3>Interior Finishing</h3><p>Flooring, drywall, painting, and detailed finishes that complete your home with style and durability.</p></div>
+        <div class="card"><div class="icon">📊</div><h3>Project Management</h3><p>End-to-end coordination of trades, scheduling, and budgets to keep your project on track and stress-free.</p></div>
+        <div class="card"><div class="icon">🏢</div><h3>Commercial Projects</h3><p>Retail/office build-outs and tenant improvements with minimal downtime.</p></div>
+      </div>
+    </div>
+  </section>
 
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Recent Projects</h2>
+      <p class="section-lead">A few highlights from our work. We’ll swap in your own photos when you’re ready.</p>
+      <div class="grid projects">
+        <figure class="project"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1200&auto=format&fit=crop" alt="House framing and trusses in progress" /><figcaption>Custom framing & structural work</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" /><figcaption>Modern exterior & envelope upgrades</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop" alt="Modern kitchen renovation" /><figcaption>Kitchen & interior renovations</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="New home build" /><figcaption>New home construction</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop" alt="Deck and outdoor living space" /><figcaption>Decks & outdoor living spaces</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Commercial TI" /><figcaption>Commercial tenant improvements</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Milan's Homes LTD</h2>
+      <p class="section-lead">We’re a BC-wide, owner-operated team focused on full-scope builds, honest quotes, and quality finishes. From Vancouver to Kelowna, we manage projects with clear communication and proven subcontractors.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us!</h2>
+      <p class="section-lead">Fill out the form below and we’ll respond promptly.</p>
+      <div class="contact-row">
+        <div class="contact-logo">
+          <img src="logo.png" alt="Milan's Homes logo" />
+        </div>
+        <form class="contact-form" onsubmit="return sendContactEmail(event)">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="phone" placeholder="Phone" required>
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/milanshomes/" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100068895518295" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H16l-.5 3h-2.7v7C18.3 21.1 22 17 22 12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Milan's Homes LTD. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendContactEmail(e){
+      e.preventDefault();
+      const f = e.target;
+      const subject = encodeURIComponent('Website Contact Form');
+      const body = encodeURIComponent(
+        `Name: ${f.name.value}\nEmail: ${f.email.value}\nPhone: ${f.phone.value}\nMessage: ${f.message.value}`
+      );
+      window.location.href = `mailto:homemilans@gmail.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
 </body>
 </html>
-
