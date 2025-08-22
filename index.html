@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Milan's Homes LTD — Construction & Renovation in BC</title>
-  <meta name="description" content="Milan's Homes LTD is a full-service construction company serving all of British Columbia. Design, build, renovations, and commercial projects. Free quotes." />
+  <title>Milan's Homes LTD — Residential & Commercial Construction</title>
+  <meta name="description" content="Milan's Homes LTD provides new builds and renovations for both residential and commercial projects across British Columbia." />
   <link rel="icon" href="logo.png" />
-  <meta property="og:title" content="Milan's Homes LTD — Construction & Renovation" />
-  <meta property="og:description" content="Build. Renovate. Elevate. Quality craftsmanship across BC." />
+  <meta property="og:title" content="Milan's Homes LTD — Residential & Commercial Construction" />
+  <meta property="og:description" content="New builds and renovations for residential and commercial projects across BC." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="logo.png" />
   <meta name="theme-color" content="#cc1f1f" />
@@ -38,8 +38,6 @@
     .nav-links{display:flex; gap:22px; align-items:center}
     .nav-links a{color:#e5e7eb; font-weight:600; padding:10px 8px; border-radius:10px}
     .nav-links a:hover{background:rgba(255,255,255,.08)}
-    .cta{display:inline-flex; align-items:center; gap:10px; background:var(--brand); color:#fff; border:none; padding:12px 16px; border-radius:12px; font-weight:700; box-shadow:0 6px 16px rgba(209,31,31,.25)}
-    .cta:hover{background:var(--brand-600)}
 
     /* Hero with image */
     .hero{position:relative; padding: clamp(70px, 10vw, 120px) 0; background:linear-gradient(rgba(10,14,20,.70), rgba(10,14,20,.80)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop'); background-size:cover; background-position:center}
@@ -56,10 +54,10 @@
     /* Services grid */
     .grid{display:grid; gap:18px}
     .services{grid-template-columns:repeat(3,1fr)}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.18)}
-    .icon{width:36px; height:36px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:#1a2230; border:1px solid #253049; margin-bottom:8px}
-    .card h3{margin:6px 0 8px; font-size:18px}
-    .card p{margin:0; color:#9fb0c4}
+    .card{background:var(--brand); border:1px solid var(--brand-600); border-radius:var(--radius); padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.18); color:#fff}
+    .icon{width:36px; height:36px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:#fff; color:#d11f1f; font-size:20px; font-weight:700; margin-bottom:8px}
+    .card h3{margin:6px 0 8px; font-size:18px; color:#fff}
+    .card p{margin:0; color:#ffecec}
 
     /* Projects gallery */
     .projects{grid-template-columns:repeat(3,1fr)}
@@ -100,7 +98,7 @@
         <img src="logo.png" alt="Milan's Homes logo" />
         <div>
           <div class="title">Milan's Homes LTD</div>
-          <span class="subtitle">Construction • Renovation</span>
+          <span class="subtitle">Residential & Commercial • New Builds & Renovations</span>
         </div>
       </div>
       <nav class="nav-links">
@@ -108,8 +106,6 @@
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <!-- CONTACT REMOVED on purpose -->
-        <a class="cta" href="#contact">Get a Free Quote</a>
       </nav>
     </div>
   </header>
@@ -123,7 +119,7 @@
         <span class="badge">✅ Full-Service Contractor</span>
         <span class="badge">🕒 Reliable Timelines</span>
         <span class="badge">🔧 Warranty on Work</span>
-        <a href="#contact" class="cta" style="margin-left:6px">Get a Free Quote</a>
+        <a href="#contact" class="cta" style="margin-left:6px; background:var(--brand); color:#fff; padding:12px 22px; border-radius:10px; font-weight:700">Get a Free Quote</a>
       </div>
     </div>
   </main>
@@ -148,30 +144,12 @@
       <h2 class="section-title">Recent Projects</h2>
       <p class="section-lead">A few highlights from our work. We’ll swap in your own photos when you’re ready.</p>
       <div class="grid projects">
-        <figure class="project">
-          <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1200&auto=format&fit=crop" alt="House framing and trusses in progress" />
-          <figcaption>Custom framing & structural work</figcaption>
-        </figure>
-        <figure class="project">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" />
-          <figcaption>Modern exterior & envelope upgrades</figcaption>
-        </figure>
-        <figure class="project">
-          <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop" alt="Modern kitchen renovation" />
-          <figcaption>Kitchen & interior renovations</figcaption>
-        </figure>
-        <figure class="project">
-          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="New home build" />
-          <figcaption>New home construction</figcaption>
-        </figure>
-        <figure class="project">
-          <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop" alt="Deck and outdoor living space" />
-          <figcaption>Decks & outdoor living spaces</figcaption>
-        </figure>
-        <figure class="project">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Commercial TI" />
-          <figcaption>Commercial tenant improvements</figcaption>
-        </figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1200&auto=format&fit=crop" alt="House framing and trusses in progress" /><figcaption>Custom framing & structural work</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" /><figcaption>Modern exterior & envelope upgrades</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop" alt="Modern kitchen renovation" /><figcaption>Kitchen & interior renovations</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="New home build" /><figcaption>New home construction</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop" alt="Deck and outdoor living space" /><figcaption>Decks & outdoor living spaces</figcaption></figure>
+        <figure class="project"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Commercial TI" /><figcaption>Commercial tenant improvements</figcaption></figure>
       </div>
     </div>
   </section>
@@ -201,16 +179,10 @@
       </div>
       <div class="social-links">
         <a href="https://www.instagram.com/milanshomes/" target="_blank" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"/>
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
-            <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/></svg>
         </a>
         <a href="https://www.facebook.com/profile.php?id=100068895518295" target="_blank" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H16l-.5 3h-2.7v7C18.3 21.1 22 17 22 12z"/>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H16l-.5 3h-2.7v7C18.3 21.1 22 17 22 12z"/></svg>
         </a>
       </div>
     </div>
