@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Milan's Homes LTD — Construction & Renovation in BC</title>
   <meta name="description" content="Milan's Homes LTD is a full-service construction company serving all of British Columbia. Design, build, renovations, exteriors, and commercial projects. Free quotes." />
-  <!-- Favicon uses the same logo -->
   <link rel="icon" href="https://raw.githubusercontent.com/MilansHomes/MilansHomes/main/logo.png" />
   <meta property="og:title" content="Milan's Homes LTD — Construction & Renovation" />
   <meta property="og:description" content="Build. Renovate. Elevate. Quality craftsmanship across BC." />
@@ -71,23 +70,23 @@
     /* Contact */
     .contact-row{
       display:flex;
-      align-items:center;         /* center logo vertically with the form */
+      align-items:center;
       gap:32px;
-      justify-content:center;
+      justify-content:flex-start;   
       flex-wrap:wrap;
     }
     .contact-logo{
-      flex:0 0 220px;             /* give the logo its own column width */
+      flex:0 0 260px;              
       display:flex;
       align-items:center;
-      justify-content:center;     /* center horizontally in its column */
+      justify-content:flex-start;  
+      margin-left:40px;            
     }
     .contact-logo img{
-      width:180px;                /* bigger logo */
+      width:200px;                 
       height:auto;
     }
 
-    /* Ensure identical typography in all fields (fixes Message mismatch) */
     form.contact-form{
       display:grid; gap:12px; max-width:640px; flex:1; font-family: inherit;
     }
@@ -98,9 +97,9 @@
       border:1px solid #ccc;
       background:#fff;
       color:#0b0f19;
-      font-family: inherit;        /* same font */
-      font-size:16px;              /* same size */
-      line-height:1.2;             /* consistent line height */
+      font-family: inherit;
+      font-size:16px;
+      line-height:1.2;
     }
     form.contact-form input::placeholder,
     form.contact-form textarea::placeholder{
@@ -118,7 +117,6 @@
     .social-links a:hover{background:var(--brand)}
     .social-links svg{width:34px; height:34px}
 
-    /* Footer */
     footer{padding:28px 0; background:#0e141c; border-top:1px solid rgba(255,255,255,.06); color:#9aa6b2; text-align:center}
 
     @media (max-width:960px){
@@ -127,7 +125,7 @@
     }
     @media (max-width:680px){
       .services,.projects{grid-template-columns:1fr}
-      .contact-logo{flex-basis:100%}            /* logo sits above form on small screens */
+      .contact-logo{flex-basis:100%; justify-content:center; margin-left:0}
     }
   </style>
 </head>
@@ -174,8 +172,8 @@
         <div class="card"><div class="icon">🏗️</div><h3>Design & Planning</h3><p>Architectural drawings, permits, budgeting, and detailed project scheduling.</p></div>
         <div class="card"><div class="icon">🏠</div><h3>New Home Construction</h3><p>Full builds from foundation to finish, tailored to your vision and lot.</p></div>
         <div class="card"><div class="icon">🧰</div><h3>Renovations & Remodels</h3><p>Kitchens, baths, additions, and whole-home upgrades with durable finishes.</p></div>
-        <div class="card"><div class="icon">📐</div><h3>Framing & Concrete</h3><p>Foundations, slabs, retaining, and structural framing for residential & light commercial.</p></div>
-        <div class="card"><div class="icon">🏡</div><h3>Exteriors & Roofing</h3><p>Siding, roofing, decks, and weather-proof envelope work that stands up to BC.</p></div>
+        <div class="card"><div class="icon">🛋️</div><h3>Interior Finishing</h3><p>Flooring, drywall, painting, and detailed finishes that complete your home with style and durability.</p></div>
+        <div class="card"><div class="icon">📊</div><h3>Project Management</h3><p>End-to-end coordination of trades, scheduling, and budgets to keep your project on track and stress-free.</p></div>
         <div class="card"><div class="icon">🏢</div><h3>Commercial Projects</h3><p>Retail/office build-outs and tenant improvements with minimal downtime.</p></div>
       </div>
     </div>
@@ -254,3 +252,4 @@
   </script>
 </body>
 </html>
+
