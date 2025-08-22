@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Milan's Homes LTD — Construction & Renovation in BC</title>
   <meta name="description" content="Milan's Homes LTD is a full-service construction company serving all of British Columbia. Design, build, renovations, exteriors, and commercial projects. Free quotes." />
+  <!-- Favicon uses the same logo -->
   <link rel="icon" href="https://raw.githubusercontent.com/MilansHomes/MilansHomes/main/logo.png" />
   <meta property="og:title" content="Milan's Homes LTD — Construction & Renovation" />
   <meta property="og:description" content="Build. Renovate. Elevate. Quality craftsmanship across BC." />
@@ -68,14 +69,50 @@
     .project figcaption{padding:12px 14px; color:#cbd6e2}
 
     /* Contact */
-    .contact-row{display:flex; align-items:flex-start; gap:32px; justify-content:center; flex-wrap:wrap}
-    .contact-logo{flex:0 0 140px; display:flex; justify-content:center;}
-    .contact-logo img{width:100%; height:auto;}
-    form.contact-form{display:grid; gap:12px; max-width:640px; flex:1; font-family: inherit;}
-    form.contact-form input, form.contact-form textarea{padding:14px 14px; border-radius:12px; border:1px solid #ccc; background:#fff; color:#0b0f19}
-    form.contact-form input::placeholder, form.contact-form textarea::placeholder{color:#555}
-    form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer; font-family: inherit; font-size:16px}
+    .contact-row{
+      display:flex;
+      align-items:center;         /* center logo vertically with the form */
+      gap:32px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .contact-logo{
+      flex:0 0 220px;             /* give the logo its own column width */
+      display:flex;
+      align-items:center;
+      justify-content:center;     /* center horizontally in its column */
+    }
+    .contact-logo img{
+      width:180px;                /* bigger logo */
+      height:auto;
+    }
+
+    /* Ensure identical typography in all fields (fixes Message mismatch) */
+    form.contact-form{
+      display:grid; gap:12px; max-width:640px; flex:1; font-family: inherit;
+    }
+    form.contact-form input,
+    form.contact-form textarea{
+      padding:14px 14px;
+      border-radius:12px;
+      border:1px solid #ccc;
+      background:#fff;
+      color:#0b0f19;
+      font-family: inherit;        /* same font */
+      font-size:16px;              /* same size */
+      line-height:1.2;             /* consistent line height */
+    }
+    form.contact-form input::placeholder,
+    form.contact-form textarea::placeholder{
+      color:#555;
+      font-family: inherit;
+      font-size:16px;
+    }
+    form.contact-form button{
+      padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer; font-family: inherit; font-size:16px
+    }
     form.contact-form button:hover{background:var(--brand-600)}
+
     .social-links{display:flex; gap:24px; margin-top:24px; justify-content:center}
     .social-links a{display:inline-flex; align-items:center; justify-content:center; width:64px; height:64px; border-radius:999px; background:#222; color:#fff}
     .social-links a:hover{background:var(--brand)}
@@ -90,6 +127,7 @@
     }
     @media (max-width:680px){
       .services,.projects{grid-template-columns:1fr}
+      .contact-logo{flex-basis:100%}            /* logo sits above form on small screens */
     }
   </style>
 </head>
@@ -216,4 +254,3 @@
   </script>
 </body>
 </html>
-
