@@ -50,16 +50,17 @@
     section{padding:clamp(56px,9vw,92px) 0}
     .section-title{font-size:clamp(26px,4vw,36px); color:#f5f7fb; margin:0 0 12px}
 
-    /* Services grid */
+    /* Grids */
     .grid{display:grid; gap:18px}
     .services{grid-template-columns:repeat(3,1fr)}
+    .projects{grid-template-columns:repeat(3,1fr)}
+
+    /* Cards / projects */
     .card{background:var(--card); color:#fff; border-radius:var(--radius); padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.18)}
     .icon{width:36px; height:36px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:#fff; color:#d11f1f; margin-bottom:8px; font-size:20px}
     .card h3{margin:6px 0 8px; font-size:18px; color:#fff}
     .card p{margin:0; color:#fff}
 
-    /* Projects gallery */
-    .projects{grid-template-columns:repeat(3,1fr)}
     .project{border-radius:16px; overflow:hidden; border:1px solid #243044; background:#0e141c}
     .project img{aspect-ratio:16/10; object-fit:cover}
     .project figcaption{padding:12px 14px; color:#cbd6e2}
@@ -70,8 +71,8 @@
     .contact-logo img{width:200px; height:auto}
     form.contact-form{display:grid; gap:12px; max-width:640px; flex:1; font-family: inherit;}
     form.contact-form input, form.contact-form textarea{padding:14px 14px; border-radius:12px; border:1px solid #ccc; background:#fff; color:#0b0f19; font-family: inherit; font-size:16px; line-height:1.2}
-    form.contact-form input::placeholder, form.contact-form textarea::placeholder{color:#555; font-family: inherit; font-size:16px}
-    form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer; font-family: inherit; font-size:16px}
+    form.contact-form input::placeholder, form.contact-form textarea::placeholder{color:#555}
+    form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer}
     form.contact-form button:hover{background:var(--brand-600)}
     .social-links{display:flex; gap:24px; margin-top:24px; justify-content:center}
     .social-links a{display:inline-flex; align-items:center; justify-content:center; width:64px; height:64px; border-radius:999px; background:#222; color:#fff}
@@ -128,16 +129,36 @@
     <div class="container">
       <h2 class="section-title">Construction Showcase</h2>
       <div class="grid projects">
-        <!-- Updated structure/framing image -->
+        <!-- Now using local file framing.png -->
         <figure class="project">
-          <img src="https://images.unsplash.com/photo-1600566753190-17f83b81aa4d?q=80&w=1200&auto=format&fit=crop" alt="Framing and trusses under construction" />
+          <img src="framing.png" alt="Framing and trusses under construction" loading="lazy" />
           <figcaption>Framing & structural work</figcaption>
         </figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" /><figcaption>Modern exterior & envelope upgrades</figcaption></figure>
-        <figure class="project"><img src="kitchen.png" alt="Modern kitchen renovation" /><figcaption>Interior renovations</figcaption></figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="New home build" /><figcaption>New home construction</figcaption></figure>
-        <figure class="project"><img src="deck.png" alt="Modern deck and outdoor living space" /><figcaption>Decks & outdoor living spaces</figcaption></figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Commercial TI" /><figcaption>Commercial tenant improvements</figcaption></figure>
+
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" loading="lazy" />
+          <figcaption>Modern exterior & envelope upgrades</figcaption>
+        </figure>
+
+        <figure class="project">
+          <img src="kitchen.png" alt="Modern kitchen renovation" loading="lazy" />
+          <figcaption>Interior renovations</figcaption>
+        </figure>
+
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="New home build" loading="lazy" />
+          <figcaption>New home construction</figcaption>
+        </figure>
+
+        <figure class="project">
+          <img src="deck.png" alt="Modern deck and outdoor living space" loading="lazy" />
+          <figcaption>Decks & outdoor living spaces</figcaption>
+        </figure>
+
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Commercial TI" loading="lazy" />
+          <figcaption>Commercial tenant improvements</figcaption>
+        </figure>
       </div>
     </div>
   </section>
