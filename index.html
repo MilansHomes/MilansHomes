@@ -18,7 +18,7 @@
       --brand-600: #bb1a1a;
       --border: #2a3240;
       --muted: #9aa6b2;
-      --card: #d11f1f; /* bright red background for cards */
+      --card: #d11f1f;
       --maxw: 1200px;
       --radius: 16px;
     }
@@ -39,7 +39,7 @@
     .nav-links a{color:#e5e7eb; font-weight:600; padding:10px 8px; border-radius:10px}
     .nav-links a:hover{background:rgba(255,255,255,.08)}
 
-    /* Hero with image */
+    /* Hero */
     .hero{position:relative; padding: clamp(70px, 10vw, 120px) 0; background:linear-gradient(rgba(10,14,20,.70), rgba(10,14,20,.80)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop'); background-size:cover; background-position:center}
     .hero h1{font-size:clamp(34px,6.5vw,60px); line-height:1.05; color:#fff; margin:10px 0 12px}
     .hero .lead{font-size:clamp(16px,2.2vw,19px); color:#d7dee8; max-width:60ch}
@@ -65,30 +65,21 @@
     .project img{aspect-ratio:16/10; object-fit:cover}
     .project figcaption{padding:12px 14px; color:#cbd6e2}
 
-    /* Compare slider (before/after) */
-    .compare{position:relative; aspect-ratio:16/10; overflow:hidden; background:#0e141c}
-    .compare-wrap{position:relative; width:100%; height:100%; --pos:50%;}
-    .compare-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; user-select:none; pointer-events:none}
-    .compare-img.after{z-index:2; clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);}
-    .compare-handle{
-      position:absolute; top:0; bottom:0; left:calc(var(--pos)); width:2px;
-      background:#ffffff; z-index:3; cursor:ew-resize; outline:none;
-      box-shadow:0 0 0 1px rgba(0,0,0,.25);
-    }
-    .compare-grip{
-      position:absolute; top:50%; left:calc(var(--pos)); transform:translate(-50%,-50%);
-      z-index:4; width:36px; height:36px; border-radius:999px; background:#ffffff; color:#111; display:flex; align-items:center; justify-content:center; font-weight:900; cursor:ew-resize;
-      box-shadow:0 8px 20px rgba(0,0,0,.35);
-    }
+    /* Before/After slider */
+    .compare{position:relative; overflow:hidden}
+    .compare-wrap{position:relative; width:100%; cursor:ew-resize}
+    .compare-img{position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover}
+    .compare-img.after{clip-path:inset(0 0 0 50%)}
+    .compare-handle{position:absolute; top:0; bottom:0; left:50%; width:3px; background:#fff; cursor:ew-resize}
+    .compare-grip{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:#d11f1f; color:#fff; padding:6px 10px; border-radius:6px; font-weight:700}
 
     /* Contact */
-    .contact-row{display:flex; align-items:center; gap:32px; justify-content:flex-start; flex-wrap:wrap}
-    .contact-logo{flex:0 0 260px; display:flex; align-items:center; justify-content:flex-start; margin-left:40px}
+    .contact-row{display:flex; align-items:center; gap:32px; flex-wrap:wrap}
+    .contact-logo{flex:0 0 260px; display:flex; justify-content:flex-start; margin-left:40px}
     .contact-logo img{width:200px; height:auto}
-    form.contact-form{display:grid; gap:12px; max-width:640px; flex:1; font-family: inherit;}
-    form.contact-form input, form.contact-form textarea{padding:14px 14px; border-radius:12px; border:1px solid #ccc; background:#fff; color:#0b0f19; font-family: inherit; font-size:16px; line-height:1.2}
-    form.contact-form input::placeholder, form.contact-form textarea::placeholder{color:#555; font-family: inherit; font-size:16px}
-    form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer; font-family: inherit; font-size:16px}
+    form.contact-form{display:grid; gap:12px; max-width:640px; flex:1}
+    form.contact-form input, form.contact-form textarea{padding:14px; border-radius:12px; border:1px solid #ccc; background:#fff; color:#0b0f19; font-size:16px}
+    form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer}
     form.contact-form button:hover{background:var(--brand-600)}
     .social-links{display:flex; gap:24px; margin-top:24px; justify-content:center}
     .social-links a{display:inline-flex; align-items:center; justify-content:center; width:64px; height:64px; border-radius:999px; background:#222; color:#fff}
@@ -135,6 +126,7 @@
         <span class="badge">✅ Full-Service Contractor</span>
         <span class="badge">🕒 Reliable Timelines</span>
         <span class="badge">🔧 Warranty on Work</span>
+        <a href="#contact" class="cta" style="margin-left:6px; background:var(--brand); color:#fff; padding:12px 22px; border-radius:10px; font-weight:700">Get a Free Quote</a>
       </div>
     </div>
   </main>
@@ -147,14 +139,14 @@
       <div class="grid projects">
         <figure class="project"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1200&auto=format&fit=crop" alt="House framing and trusses in progress" /><figcaption>Custom framing & structural work</figcaption></figure>
         <figure class="project"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" /><figcaption>Modern exterior & envelope upgrades</figcaption></figure>
-
-        <!-- Interior renovations: before/after slider -->
+        
+        <!-- Interior renovations slider -->
         <figure class="project">
           <div class="compare">
             <div class="compare-wrap" data-pos="50">
-              <img class="compare-img before" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1600&auto=format&fit=crop" alt="Interior - before">
-              <img class="compare-img after"  src="https://images.unsplash.com/photo-1505692794403-34cb79d4b3c9?q=80&w=1600&auto=format&fit=crop" alt="Interior - after">
-              <div class="compare-handle" role="separator" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
+              <img class="compare-img before" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1600&auto=format&fit=crop" alt="Interior before">
+              <img class="compare-img after"  src="https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?q=80&w=1600&auto=format&fit=crop" alt="Interior after">
+              <div class="compare-handle"></div>
               <div class="compare-grip">↔</div>
             </div>
           </div>
@@ -168,7 +160,7 @@
     </div>
   </section>
 
-  <!-- SERVICES AFTER -->
+  <!-- SERVICES AFTER PROJECTS -->
   <section id="services">
     <div class="container">
       <h2 class="section-title">Services</h2>
@@ -223,63 +215,11 @@
   </footer>
 
   <script>
-    // Simple mailto approach for now
+    // Email send
     function sendContactEmail(e){
       e.preventDefault();
       const f = e.target;
       const subject = encodeURIComponent('Website Contact Form');
       const body = encodeURIComponent(
-        `Name: ${f.name.value}\nEmail: ${f.email.value}\nPhone: ${f.phone.value}\nMessage: ${f.message.value}`
-      );
-      window.location.href = `mailto:homemilans@gmail.com?subject=${subject}&body=${body}`;
-      return false;
-    }
-
-    // Before/After slider logic
-    function initCompare(el){
-      const wrap = el.querySelector('.compare-wrap');
-      const handle = el.querySelector('.compare-handle');
-      const grip = el.querySelector('.compare-grip');
-      const setPos = (px) => {
-        const rect = wrap.getBoundingClientRect();
-        let p = ((px - rect.left) / rect.width) * 100;
-        p = Math.max(0, Math.min(100, p));
-        wrap.style.setProperty('--pos', p + '%');
-        handle.setAttribute('aria-valuenow', Math.round(p));
-      };
-      let dragging = false;
-
-      const start = (e) => { dragging = true; e.preventDefault(); };
-      const move = (e) => { if(!dragging) return;
-        const x = e.touches ? e.touches[0].clientX : e.clientX;
-        setPos(x);
-      };
-      const end = () => { dragging = false; };
-
-      [handle, grip, wrap].forEach(n=>{
-        n.addEventListener('mousedown', start);
-        n.addEventListener('touchstart', start, {passive:false});
-      });
-      window.addEventListener('mousemove', move);
-      window.addEventListener('touchmove', move, {passive:false});
-      window.addEventListener('mouseup', end);
-      window.addEventListener('touchend', end);
-
-      // Keyboard support
-      handle.addEventListener('keydown', (e)=>{
-        const rect = wrap.getBoundingClientRect();
-        const current = parseFloat(getComputedStyle(wrap).getPropertyValue('--pos'));
-        const delta = (e.key === 'ArrowRight') ? 2 : (e.key === 'ArrowLeft') ? -2 : 0;
-        if(delta !== 0){
-          e.preventDefault();
-          const px = rect.left + rect.width * ((current + delta)/100);
-          setPos(px);
-        }
-      });
-    }
-
-    document.querySelectorAll('.compare').forEach(initCompare);
-  </script>
-</body>
-</html>
+        `Name: ${f.name.value}\nEmail: ${f.email.value}\n
 
