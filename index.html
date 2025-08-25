@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Milan's Homes LTD — Construction & Renovation in BC</title>
-  <meta name="description" content="Milan's Homes LTD is a trusted construction company with over 25 years of experience across British Columbia. Specializing in new builds, renovations, and commercial projects." />
+  <meta name="description" content="Milan's Homes LTD — 25+ years of quality construction across British Columbia. New builds, renovations, and commercial projects with reliable timelines and clear communication." />
   <link rel="icon" href="logo.png" />
   <meta property="og:title" content="Milan's Homes LTD — Construction & Renovation" />
-  <meta property="og:description" content="Trusted BC builders with 25+ years of experience. Residential and commercial projects, built with quality and reliability." />
+  <meta property="og:description" content="Trusted BC builders with 25+ years of experience. Residential and commercial projects delivered with craftsmanship and reliability." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="logo.png" />
   <meta name="theme-color" content="#cc1f1f" />
@@ -55,10 +55,9 @@
     .section-title{font-size:clamp(26px,4vw,36px); color:#f5f7fb; margin:0 0 12px}
     .section-lead{color:#c6cfdb; margin:0 0 26px}
 
-    /* Grids */
     .grid{display:grid; gap:18px}
 
-    /* Services grid */
+    /* Services */
     .services{grid-template-columns:repeat(3,1fr)}
     .card{background:var(--card); color:#fff; border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); transition: transform .18s ease, box-shadow .18s ease}
     .card:hover{transform:translateY(-2px); box-shadow:0 14px 36px rgba(0,0,0,.28)}
@@ -66,7 +65,7 @@
     .card h3{margin:6px 0 8px; font-size:18px; color:#fff}
     .card p{margin:0; color:#ffecec}
 
-    /* Projects gallery */
+    /* Projects */
     .projects{grid-template-columns:repeat(3,1fr)}
     .project{border-radius:16px; overflow:hidden; border:1px solid #243044; background:#0e141c; box-shadow:var(--shadow)}
     .project img{aspect-ratio:16/10; object-fit:cover}
@@ -78,7 +77,8 @@
     .contact-logo img{width:200px; height:auto}
     form.contact-form{display:grid; gap:12px; max-width:640px; flex:1; font-family: inherit;}
     form.contact-form input, form.contact-form textarea{padding:14px 14px; border-radius:12px; border:1px solid #ccc; background:#fff; color:#0b0f19; font-family: inherit; font-size:16px; line-height:1.2}
-    form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer; font-family: inherit; font-size:16px}
+    form.contact-form input::placeholder, form.contact-form textarea::placeholder{color:#555}
+    form.contact-form button{padding:14px; border-radius:12px; border:none; background:var(--brand); color:#fff; font-weight:800; cursor:pointer; font-size:16px}
     form.contact-form button:hover{background:var(--brand-600)}
     .social-links{display:flex; gap:24px; margin-top:24px; justify-content:center}
     .social-links a{display:inline-flex; align-items:center; justify-content:center; width:64px; height:64px; border-radius:999px; background:#222; color:#fff}
@@ -152,12 +152,31 @@
       <h2 class="section-title">Recent Projects</h2>
       <p class="section-lead">Some of the work we’re proud of across BC.</p>
       <div class="grid projects">
-        <figure class="project"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1200&auto=format&fit=crop" alt="Framing work" /><figcaption>Framing & structural work</figcaption></figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" /><figcaption>Exterior upgrades</figcaption></figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1200&auto=format&fit=crop" alt="Modern kitchen" /><figcaption>Interior renovations</figcaption></figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="New home build" /><figcaption>New home construction</figcaption></figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop" alt="Deck and outdoor living space" /><figcaption>Decks & outdoor living</figcaption></figure>
-        <figure class="project"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Commercial tenant improvements" /><figcaption>Commercial projects</figcaption></figure>
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1200&auto=format&fit=crop" alt="Framing work" />
+          <figcaption>Framing & structural work</figcaption>
+        </figure>
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Modern exterior" />
+          <figcaption>Exterior upgrades</figcaption>
+        </figure>
+        <figure class="project">
+          <!-- Your kitchen image: upload to repo as kitchen.jpg (or change the path) -->
+          <img src="kitchen.jpg" alt="Modern kitchen renovation" />
+          <figcaption>Interior renovations</figcaption>
+        </figure>
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="New home build" />
+          <figcaption>New home construction</figcaption>
+        </figure>
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop" alt="Deck and outdoor living space" />
+          <figcaption>Decks & outdoor living</figcaption>
+        </figure>
+        <figure class="project">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Commercial tenant improvements" />
+          <figcaption>Commercial projects</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -167,14 +186,20 @@
     <div class="container">
       <h2 class="section-title">About Milan's Homes LTD</h2>
       <div class="card" style="background:#10161f; color:#d9e2ec; border:1px solid var(--border); box-shadow:var(--shadow); padding:20px;">
-        <p>
-          Milan's Homes LTD has been building across British Columbia for more than 25 years. From the Lower Mainland to Kelowna, we’ve earned a reputation for delivering quality homes, renovations, and commercial projects that stand the test of time.
+        <p style="margin-top:0">
+          Milan's Homes LTD has been building across British Columbia for more than <strong>25 years</strong>.
+          From the Lower Mainland to Kelowna, we’ve earned a reputation for delivering quality homes,
+          renovations, and commercial projects that stand the test of time.
         </p>
         <p>
-          Our team is committed to craftsmanship, reliability, and clear communication. Every project—large or small—is handled with the same attention to detail and pride. We understand that construction isn’t just about structures; it’s about creating spaces where families and businesses thrive.
+          Our focus is simple: <strong>craftsmanship</strong>, <strong>reliability</strong>, and
+          <strong>clear communication</strong>. Every project—large or small—is handled with the same attention
+          to detail and pride. Construction isn’t just about structures; it’s about creating spaces where families
+          and businesses thrive.
         </p>
-        <p>
-          Over the years, we’ve completed countless projects across BC, building lasting relationships with clients through trust and results. When you work with us, you can expect honest timelines, transparent budgets, and a commitment to exceeding expectations.
+        <p style="margin-bottom:0">
+          Expect honest timelines, transparent budgets, and a team that treats your project like it’s our own.
+          That’s how we’ve built lasting relationships all over BC.
         </p>
       </div>
     </div>
@@ -202,19 +227,4 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/></svg>
         </a>
         <a href="https://www.facebook.com/profile.php?id=100068895518295" target="_blank" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12H16l-.5 3h-2.7v7C18.3 21.1 22 17 22 12z"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Milan's Homes LTD. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function sendContactEmail(e){
-      e.preventDefault();
-      const f = e.target;
-      const subject = encodeURIComponent('Website Contact Form');
-      const
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.
